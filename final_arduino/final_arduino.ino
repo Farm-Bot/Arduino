@@ -59,21 +59,21 @@ void setup() {
 void loop() {
   while (1) {
     int pyDirection = pyserial();
-    int ultrasonicDirection = ultrasonicDecision();
-    int irDirection = irDecision();
+    //int ultrasonicDirection = ultrasonicDecision();
+    //int irDirection = irDecision();
 
-    if (pyDirection) {
+    if (pyDirection)
       motor(pyDirection);
       break;
-    }
-    else {
-      if (ultrasonicDirection == irDirection) {
-        motor(irDirection);
-      }
-      else {
-        motor(ultrasonicDirection);
+//     }
+//     else {
+//       if (ultrasonicDirection == irDirection) {
+//         motor(irDirection);
+//       }
+//       else {
+//         motor(ultrasonicDirection);
 
-      }
+//       }
     }
   }
 }
